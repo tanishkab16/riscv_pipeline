@@ -1,0 +1,93 @@
+$date
+	Mon Jul 28 06:59:04 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module pc_reg_tb $end
+$var wire 32 ! pc_o [31:0] $end
+$var reg 1 " clk $end
+$var reg 32 # pc_next_i [31:0] $end
+$var reg 1 $ pc_write_en_i $end
+$var reg 1 % rst_n $end
+$scope module DUT $end
+$var wire 1 " clk $end
+$var wire 32 & pc_next_i [31:0] $end
+$var wire 1 $ pc_write_en_i $end
+$var wire 1 % rst_n $end
+$var reg 32 ' pc_o [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 '
+b0 &
+0%
+0$
+b0 #
+0"
+b0 !
+$end
+#5
+1"
+#10
+0"
+1%
+#15
+1"
+#20
+0"
+1$
+b100 #
+b100 &
+#25
+b100 !
+b100 '
+1"
+#30
+0"
+b1000 #
+b1000 &
+#35
+b1000 !
+b1000 '
+1"
+#40
+0"
+b100000000 #
+b100000000 &
+#45
+b100000000 !
+b100000000 '
+1"
+#50
+0"
+b100000100 #
+b100000100 &
+0$
+#55
+1"
+#60
+0"
+1$
+#65
+b100000100 !
+b100000100 '
+1"
+#70
+0"
+#75
+1"
+#80
+0"
+#85
+1"
+#90
+0"

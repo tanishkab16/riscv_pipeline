@@ -1,0 +1,18 @@
+# Read only the top-level module.
+# The `include directives within this file will handle the rest.
+read_verilog -D SYNTHESIS ./src/riscv_core.v
+
+# Set the top-level module for synthesis
+hierarchy -top pipelined_processor
+
+# Perform synthesis
+synth -top pipelined_processor
+
+# Map to a generic gate library
+abc
+
+# Clean up redundant logic
+opt_clean
+
+# Write the final gate-level netlist to a Verilog file
+write_verilog synth/pipelined_processor_synth.v

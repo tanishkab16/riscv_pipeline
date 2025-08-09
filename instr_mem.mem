@@ -1,0 +1,13 @@
+00a00093 // 0x00: addi x1, x0, 10
+00508113 // 0x04: addi x2, x1, 5
+40510133 // 0x08: sub x3, x2, x1
+01400213 // 0x0C: addi x4, x0, 20
+00400023 // 0x10: sw x4, 0(x0)
+00002283 // 0x14: lw x5, 0(x0)
+06400313 // 0x18: addi x6, x0, 100
+00828663 // 0x1C: beq x5, x0, 8 (offset to 0x24)
+00130313 // 0x20: addi x6, x6, 1
+0c800393 // 0x24: addi x7, x0, 200
+0040006f // 0x28: jal x0, 4 (offset to 0x2C)
+00000013 // 0x2C: addi x0, x0, 0
+ffc0006f // 0x30: jal x0, -4 (offset to 0x2C, loop back to addi x0,x0,0)

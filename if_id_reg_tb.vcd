@@ -1,0 +1,131 @@
+$date
+	Thu Jul 31 05:30:39 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module if_id_reg_tb $end
+$var wire 32 ! id_pc_plus_4_o [31:0] $end
+$var wire 32 " id_instruction_o [31:0] $end
+$var reg 1 # clk $end
+$var reg 1 $ flush_i $end
+$var reg 32 % if_instruction_i [31:0] $end
+$var reg 32 & if_pc_plus_4_i [31:0] $end
+$var reg 1 ' rst_n $end
+$var reg 1 ( stall_i $end
+$scope module DUT $end
+$var wire 1 # clk $end
+$var wire 1 $ flush_i $end
+$var wire 32 ) if_instruction_i [31:0] $end
+$var wire 32 * if_pc_plus_4_i [31:0] $end
+$var wire 1 ' rst_n $end
+$var wire 1 ( stall_i $end
+$var reg 32 + id_instruction_o [31:0] $end
+$var reg 32 , id_pc_plus_4_o [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 ,
+b0 +
+b0 *
+b0 )
+0(
+0'
+b0 &
+b0 %
+0$
+0#
+b0 "
+b0 !
+$end
+#5
+1#
+#10
+0#
+b101000000000000010010011 %
+b101000000000000010010011 )
+b100 &
+b100 *
+1'
+#15
+b101000000000000010010011 "
+b101000000000000010010011 +
+b100 !
+b100 ,
+1#
+#20
+0#
+b10100001000000100010011 %
+b10100001000000100010011 )
+b1000 &
+b1000 *
+#25
+b10100001000000100010011 "
+b10100001000000100010011 +
+b1000 !
+b1000 ,
+1#
+#30
+0#
+b100010000000110110011 %
+b100010000000110110011 )
+b1100 &
+b1100 *
+1(
+#35
+1#
+#40
+0#
+0(
+#45
+b100010000000110110011 "
+b100010000000110110011 +
+b1100 !
+b1100 ,
+1#
+#50
+0#
+b1010000000000001000010011 %
+b1010000000000001000010011 )
+b10000 &
+b10000 *
+1(
+1$
+#55
+b10011 "
+b10011 +
+b0 !
+b0 ,
+1#
+#60
+0#
+b10000000000000000100011 %
+b10000000000000000100011 )
+b10100 &
+b10100 *
+0(
+0$
+#65
+b10000000000000000100011 "
+b10000000000000000100011 +
+b10100 !
+b10100 ,
+1#
+#70
+0#
+#75
+1#
+#80
+0#
+#85
+1#
+#90
+0#

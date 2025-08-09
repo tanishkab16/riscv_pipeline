@@ -1,0 +1,322 @@
+$date
+	Tue Jul 29 05:12:19 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module control_unit_tb $end
+$var wire 1 ! reg_write_en_o $end
+$var wire 2 " pc_src_o [1:0] $end
+$var wire 1 # mem_write_en_o $end
+$var wire 2 $ mem_to_reg_o [1:0] $end
+$var wire 1 % mem_read_en_o $end
+$var wire 1 & jump_o $end
+$var wire 1 ' branch_o $end
+$var wire 2 ( alu_src_b_o [1:0] $end
+$var wire 4 ) alu_op_o [3:0] $end
+$var parameter 4 * ALU_ADD $end
+$var parameter 4 + ALU_AND $end
+$var parameter 4 , ALU_COPY_B $end
+$var parameter 4 - ALU_OR $end
+$var parameter 4 . ALU_SLL $end
+$var parameter 4 / ALU_SLT $end
+$var parameter 4 0 ALU_SLTU $end
+$var parameter 4 1 ALU_SRA $end
+$var parameter 4 2 ALU_SRL $end
+$var parameter 4 3 ALU_SUB $end
+$var parameter 4 4 ALU_XOR $end
+$var parameter 3 5 FUNCT3_ADD_SUB $end
+$var parameter 3 6 FUNCT3_AND $end
+$var parameter 3 7 FUNCT3_OR $end
+$var parameter 3 8 FUNCT3_SLL $end
+$var parameter 3 9 FUNCT3_SLT $end
+$var parameter 3 : FUNCT3_SLTU $end
+$var parameter 3 ; FUNCT3_SRL_SRA $end
+$var parameter 3 < FUNCT3_XOR $end
+$var parameter 7 = FUNCT7_ADD $end
+$var parameter 7 > FUNCT7_SUB $end
+$var parameter 2 ? MEM_TO_REG_ALU_RESULT $end
+$var parameter 2 @ MEM_TO_REG_MEM_DATA $end
+$var parameter 2 A MEM_TO_REG_PC_PLUS_4 $end
+$var parameter 7 B OPCODE_AUIPC $end
+$var parameter 7 C OPCODE_BRANCH $end
+$var parameter 7 D OPCODE_IMM $end
+$var parameter 7 E OPCODE_JAL $end
+$var parameter 7 F OPCODE_JALR $end
+$var parameter 7 G OPCODE_LOAD $end
+$var parameter 7 H OPCODE_LUI $end
+$var parameter 7 I OPCODE_R_TYPE $end
+$var parameter 7 J OPCODE_STORE $end
+$var parameter 2 K PC_SRC_BRANCH $end
+$var parameter 2 L PC_SRC_JUMP $end
+$var parameter 2 M PC_SRC_PC_PLUS_4 $end
+$var reg 3 N funct3_i [2:0] $end
+$var reg 7 O funct7_i [6:0] $end
+$var reg 7 P opcode_i [6:0] $end
+$scope module DUT $end
+$var wire 3 Q funct3_i [2:0] $end
+$var wire 7 R funct7_i [6:0] $end
+$var wire 7 S opcode_i [6:0] $end
+$var parameter 4 T ALU_ADD $end
+$var parameter 4 U ALU_AND $end
+$var parameter 4 V ALU_COPY_B $end
+$var parameter 4 W ALU_OR $end
+$var parameter 4 X ALU_SLL $end
+$var parameter 4 Y ALU_SLT $end
+$var parameter 4 Z ALU_SLTU $end
+$var parameter 4 [ ALU_SRA $end
+$var parameter 4 \ ALU_SRL $end
+$var parameter 4 ] ALU_SUB $end
+$var parameter 4 ^ ALU_XOR $end
+$var parameter 3 _ FUNCT3_ADD_SUB $end
+$var parameter 3 ` FUNCT3_AND $end
+$var parameter 3 a FUNCT3_OR $end
+$var parameter 3 b FUNCT3_SLL $end
+$var parameter 3 c FUNCT3_SLT $end
+$var parameter 3 d FUNCT3_SLTU $end
+$var parameter 3 e FUNCT3_SRL_SRA $end
+$var parameter 3 f FUNCT3_XOR $end
+$var parameter 7 g FUNCT7_ADD $end
+$var parameter 7 h FUNCT7_SUB $end
+$var parameter 2 i MEM_TO_REG_ALU_RESULT $end
+$var parameter 2 j MEM_TO_REG_MEM_DATA $end
+$var parameter 2 k MEM_TO_REG_PC_PLUS_4 $end
+$var parameter 7 l OPCODE_AUIPC $end
+$var parameter 7 m OPCODE_BRANCH $end
+$var parameter 7 n OPCODE_IMM $end
+$var parameter 7 o OPCODE_JAL $end
+$var parameter 7 p OPCODE_JALR $end
+$var parameter 7 q OPCODE_LOAD $end
+$var parameter 7 r OPCODE_LUI $end
+$var parameter 7 s OPCODE_R_TYPE $end
+$var parameter 7 t OPCODE_STORE $end
+$var parameter 2 u PC_SRC_BRANCH $end
+$var parameter 2 v PC_SRC_JUMP $end
+$var parameter 2 w PC_SRC_PC_PLUS_4 $end
+$var reg 4 x alu_op_o [3:0] $end
+$var reg 2 y alu_src_b_o [1:0] $end
+$var reg 1 ' branch_o $end
+$var reg 1 & jump_o $end
+$var reg 1 % mem_read_en_o $end
+$var reg 2 z mem_to_reg_o [1:0] $end
+$var reg 1 # mem_write_en_o $end
+$var reg 2 { pc_src_o [1:0] $end
+$var reg 1 ! reg_write_en_o $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b0 w
+b10 v
+b1 u
+b100011 t
+b110011 s
+b110111 r
+b11 q
+b1100111 p
+b1101111 o
+b10011 n
+b1100011 m
+b10111 l
+b10 k
+b1 j
+b0 i
+b100000 h
+b0 g
+b100 f
+b101 e
+b11 d
+b10 c
+b1 b
+b110 a
+b111 `
+b0 _
+b100 ^
+b1 ]
+b110 \
+b111 [
+b1001 Z
+b1000 Y
+b101 X
+b11 W
+b1111 V
+b10 U
+b0 T
+b0 M
+b10 L
+b1 K
+b100011 J
+b110011 I
+b110111 H
+b11 G
+b1100111 F
+b1101111 E
+b10011 D
+b1100011 C
+b10111 B
+b10 A
+b1 @
+b0 ?
+b100000 >
+b0 =
+b100 <
+b101 ;
+b11 :
+b10 9
+b1 8
+b110 7
+b111 6
+b0 5
+b100 4
+b1 3
+b110 2
+b111 1
+b1001 0
+b1000 /
+b101 .
+b11 -
+b1111 ,
+b10 +
+b0 *
+$end
+#0
+$dumpvars
+b0 {
+b0 z
+b0 y
+b0 x
+b0 S
+b0 R
+b0 Q
+b0 P
+b0 O
+b0 N
+b0 )
+b0 (
+0'
+0&
+0%
+b0 $
+0#
+b0 "
+0!
+$end
+#10
+1!
+b110011 P
+b110011 S
+#20
+b1 )
+b1 x
+1!
+b100000 O
+b100000 R
+#30
+b1 (
+b1 y
+b0 )
+b0 x
+1!
+b0 O
+b0 R
+b10011 P
+b10011 S
+#40
+b1 $
+b1 z
+1%
+b1 (
+b1 y
+1!
+b11 P
+b11 S
+#50
+1#
+b1 (
+b1 y
+0%
+b0 $
+b0 z
+0!
+b100011 P
+b100011 S
+#60
+b1 )
+b1 x
+b1 "
+b1 {
+1'
+b0 (
+b0 y
+0#
+b1100011 P
+b1100011 S
+#70
+b10 $
+b10 z
+1&
+1!
+0'
+b10 "
+b10 {
+b0 )
+b0 x
+b1101111 P
+b1101111 S
+#80
+b1 (
+b1 y
+1&
+b10 "
+b10 {
+b10 $
+b10 z
+1!
+b1100111 P
+b1100111 S
+#90
+b1111 )
+b1111 x
+0&
+b0 "
+b0 {
+b1 (
+b1 y
+b0 $
+b0 z
+1!
+b110111 P
+b110111 S
+#100
+b0 )
+b0 x
+b1 (
+b1 y
+1!
+b10111 P
+b10111 S
+#110
+b101 )
+b101 x
+b0 (
+b0 y
+1!
+b1 N
+b1 Q
+b110011 P
+b110011 S
+#120
+b1 (
+b1 y
+b110 )
+b110 x
+1!
+b101 N
+b101 Q
+b10011 P
+b10011 S
+#150
